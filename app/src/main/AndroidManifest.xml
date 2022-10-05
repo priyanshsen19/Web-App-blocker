@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="xyz.codewithcoffee.cysapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.REQUEST_CODE"/>
+    <uses-permission android:name="android.permission.REQUESTED_PERMISSION"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions"/>
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/appicon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Sign_up">
+
+        <service android:name="xyz.codewithcoffee.cysapp.Service.YourService" />
+        <receiver
+            android:name="xyz.codewithcoffee.cysapp.Service.Restarter"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+                <action android:name="android.intent.action.MY_PACKAGE_SUSPENDED" />
+                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.MY_PACKAGE_SUSPENDED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="xyz.codewithcoffee.cysapp.Dashboard" />
+        <activity android:name="xyz.codewithcoffee.cysapp.WebsiteBlocking" />
+        <activity android:name="xyz.codewithcoffee.cysapp.AppBlocking" />
+        <activity android:name="xyz.codewithcoffee.cysapp.ChatUI" />
+        <activity android:name="xyz.codewithcoffee.cysapp.OnlineExam" />
+        <activity android:name="xyz.codewithcoffee.cysapp.QuestionSet" />
+        <activity android:name="xyz.codewithcoffee.cysapp.LogInPage" />
+        <activity android:name="xyz.codewithcoffee.cysapp.SignUpPage" />
+        <activity android:name="xyz.codewithcoffee.cysapp.AboutUs" />
+        <activity android:name="xyz.codewithcoffee.cysapp.ContactUs" />
+        <activity android:name="xyz.codewithcoffee.cysapp.Timetable" />
+        <activity android:name="xyz.codewithcoffee.cysapp.WebBlockingOverlay" />
+        <activity android:name="xyz.codewithcoffee.cysapp.AppBlockingOverlay" />
+        <activity android:name="xyz.codewithcoffee.cysapp.ShareApp" />
+        <activity android:name="xyz.codewithcoffee.cysapp.Syllabus" />
+        <activity android:name="xyz.codewithcoffee.cysapp.RateUs" />
+        <activity
+            android:name="xyz.codewithcoffee.cysapp.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="xyz.codewithcoffee.cysapp.home_page_navigation"
+            android:exported="false"
+            android:label="@string/title_activity_home_page_navigation"
+            android:theme="@style/Theme.Sign_up.NoActionBar" />
+        <activity
+            android:name="xyz.codewithcoffee.cysapp.Home_page"
+            android:exported="false" />
+
+        <service
+            android:name="xyz.codewithcoffee.cysapp.UrlInterceptorService"
+            android:label="Web Blocker Accessibility"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+        <service
+            android:name="xyz.codewithcoffee.cysapp.AppMonitorService"
+            android:label="App Blocker Accessibility"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config"/>
+        </service>
+
+    </application>
+
+</manifest>

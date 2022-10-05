@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="xyz.codewithcoffee.cysapp.OnlineExam"
+    android:background="@drawable/home_back">
+
+    <ImageView
+        android:id="@+id/exam_double_line"
+        android:layout_width="411dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/double_line" />
+
+    <TextView
+        android:id="@+id/online_text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Online Exam Question Set"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/exam_double_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option_correct" />
+
+    <EditText
+        android:id="@+id/question_name"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="2000"
+        android:maxLines="4"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text=""
+        android:hint="Question No X Title :"
+        android:textColor="@color/black"
+        android:textColorHint="#353535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exam_double_line" />
+
+    <EditText
+        android:id="@+id/option_a_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Option 1 :"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="#353535"
+        app:layout_constraintTop_toBottomOf="@+id/question_name"
+        tools:layout_editor_absoluteX="101dp" />
+    <EditText
+        android:id="@+id/option_b_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Option 2 :"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="#353535"
+        app:layout_constraintTop_toBottomOf="@+id/option_a_edit"
+        tools:layout_editor_absoluteX="101dp" />
+
+    <EditText
+        android:id="@+id/option_c_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Option 3 :"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="#353535"
+        app:layout_constraintTop_toBottomOf="@+id/option_b_edit"
+        tools:layout_editor_absoluteX="101dp" />
+
+    <EditText
+        android:id="@+id/option_d_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Option 4 :"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="#353535"
+        app:layout_constraintTop_toBottomOf="@+id/option_c_edit"
+        tools:layout_editor_absoluteX="101dp" />
+
+    <EditText
+        android:id="@+id/option_correct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Correct Option(1/2/3/4) :"
+        android:inputType="number"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="#353535"
+        app:layout_constraintTop_toBottomOf="@+id/option_d_edit"
+        tools:layout_editor_absoluteX="101dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

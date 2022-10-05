@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/app_blocking"
+            android:icon="@drawable/ic_appblocking"
+            android:title="App Blocking" />
+        <item
+            android:id="@+id/web_blocking"
+            android:icon="@drawable/ic_websiteblocking"
+            android:title="Website Blocking" />
+        <item
+            android:id="@+id/chat"
+            android:icon="@drawable/ic_contactus"
+            android:title="Chat" />
+        <item
+            android:id="@+id/online_exam"
+            android:icon="@drawable/ic_onlineexam"
+            android:title="Online Exam" />
+        <item
+            android:id="@+id/syllabus"
+            android:icon="@android:drawable/ic_menu_sort_alphabetically"
+            android:title="Syllabus" />
+        <item
+            android:id="@+id/rate"
+            android:icon="@drawable/rate_us_ic"
+            android:title="Rate Us" />
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/about_us_ic"
+            android:title="About Us" />
+        <item
+            android:id="@+id/contact_us"
+            android:icon="@drawable/contact_us"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/share"
+            android:title="Share App" />
+        <item
+            android:id="@+id/sign_out"
+            android:icon="@drawable/logout_small"
+            android:title="Sign Out" />
+    </group>
+</menu>

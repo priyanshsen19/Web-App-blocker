@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/contuct"
+    tools:context="xyz.codewithcoffee.cysapp.ContactUs">
+
+
+
+    <TextView
+        android:id="@+id/getintouch"
+        android:layout_width="253dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="430dp"
+        android:text="Get In Touch With Us :"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/feel_free_2contact"
+        android:layout_width="174dp"
+        android:layout_height="22dp"
+        android:text="Feel free to contact us"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getintouch" />
+
+    <ImageView
+        android:id="@+id/fullname"
+        android:layout_width="289dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:scaleX="1.95"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feel_free_2contact"
+        app:srcCompat="@drawable/ic_email_rectangle"
+        tools:ignore="VectorDrawableCompat" />
+
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="272dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:hint="Fullname:"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#DA676767"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feel_free_2contact" />
+
+    <ImageView
+        android:id="@+id/write_some"
+        android:layout_width="295dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="90dp"
+        android:scaleX="1.15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getintouch"
+        app:srcCompat="@drawable/ic_email_rectangle"
+        tools:ignore="VectorDrawableCompat" />
+
+    <EditText
+        android:id="@+id/edit_write_some"
+        android:layout_width="264dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="1dp"
+        android:ems="10"
+        android:hint="Write Something:"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#DA676767"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_ucc" />
+
+    <ImageView
+        android:id="@+id/email_ucc"
+        android:layout_width="306dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="4dp"
+        android:scaleX="1.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullname"
+        app:srcCompat="@drawable/ic_email_rectangle"
+        tools:ignore="VectorDrawableCompat" />
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="274dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="-1dp"
+        android:ems="10"
+        android:hint="Email:"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#DA676767"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editName" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="81dp"
+        android:layout_height="41dp"
+        android:text="Send"
+        app:backgroundTint="#2D48D5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_write_some" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="42dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cyc_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

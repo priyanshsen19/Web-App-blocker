@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip" >
+
+    <ImageView
+        android:id="@+id/listbg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:scaleX="10"
+        android:scaleY="1.3"
+
+        app:srcCompat="@android:drawable/divider_horizontal_textfield" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:text="[Username]"
+        android:textColor="@color/textcolor_black"
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/uid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:paddingBottom="3dp"
+        android:text="[UID]"
+        android:textSize="10sp"
+        android:textColor="#393939" />
+
+    <ImageButton
+        android:id="@+id/msg_user"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_alignBottom="@+id/user_name"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:background="#006411FF"
+        android:scaleType="fitCenter"
+        app:srcCompat="@android:drawable/stat_notify_chat"
+        tools:srcCompat="@android:drawable/stat_notify_chat" />
+
+</RelativeLayout>
